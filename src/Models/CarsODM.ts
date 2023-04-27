@@ -21,6 +21,14 @@ class CarsODM {
   public async create(car: ICar): Promise<ICar> {
     return this.model.create({ ...car });
   }
+
+  public async find(): Promise<ICar[]> {
+    return this.model.find();
+  }
+
+  public async findByValue(value: string): Promise<ICar | null> {
+    return this.model.findById(value).select('-__v');
+  }
 }
 
 export default CarsODM;

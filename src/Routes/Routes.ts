@@ -8,4 +8,14 @@ routes.post(
   (req, res, next) => new Cars(req, res, next).create(),
 );
 
+routes.get(
+  '/cars',
+  (req, res, next) => new Cars(req, res, next).getAll(),
+);
+
+routes.get(
+  '/cars/:id',
+  (req, res, next) => new Cars(req, res, next).getByValue(),
+);
+
 export default routes;
