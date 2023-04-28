@@ -1,11 +1,11 @@
 import express from 'express';
-import routes from './Routes/Routes';
-import router from './Routes/Vehicles';
+import Cars from './Routes/Cars';
+import Motorcycles from './Routes/Motorcycles';
 
 const app = express();
 app.use(express.json());
 
-app.use(routes);
-app.use(router);
+app.use(Cars);
+app.use(Motorcycles);
 
 export default app;
