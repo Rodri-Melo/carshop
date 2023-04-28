@@ -22,6 +22,13 @@ class CarsServices {
 
     if (getByValue) { return new Car(getByValue); } 
   }
+
+  public async updateValue(id: string, data: ICar) {
+    const carODM = new CarsODM();
+    const getByValue = await carODM.updateByValue(id, data);
+    // return getByValue;
+    if (getByValue) { return new Car(getByValue); }
+  }
 }
 
 export default CarsServices;
