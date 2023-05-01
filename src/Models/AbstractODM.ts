@@ -20,7 +20,7 @@ abstract class AbstractODM<T> {
   }
 
   public async findByValue(value: string): Promise<T | null> {
-    return this.model.findById(value).select('-__v');
+    return this.model.findById(value, { __v: 0 }); 
   }
 
   public async update(_id: string, obj: Partial<T>): Promise<T | null> {
