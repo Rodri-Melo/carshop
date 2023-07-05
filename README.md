@@ -11,6 +11,7 @@ Um projeto feito no curso de Desenvolvimento full-stack na trybe, mostra uma sol
 ## Tecnologias e Ferramentas
 
 Typescript, POO, Docker, MongoDB e Mongoose.
+
 Mocha,Chai e Sinon para fazer testes.
 
 ## Instalação
